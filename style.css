@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* start-navigation */
+
+header {
+    background: #220A38;
+    
+    width: 100%;
+}
+
+header nav .logo img {
+    height: 45px;
+}
+
+header nav {
+    padding: 20px 20px 20px 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+header nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .logo {
+    width: 20px;
+}
+
+header nav .nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 35px;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+header nav .nav-right a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav .nav-right a:hover::after {
+    width: 100%;
+}
+
+header nav .nav-right .search  {
+    background: #E95DBC;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+input {
+    width: 130px;
+}
+
+header nav .nav-right .search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+
+header nav .nav-right .search  i {
+    padding-right: 10px;
+    color: black;
+}
+
+/* end navigation */
+
+.home .content {
+    width: 100%;
+    top: 100px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/pho18.jpg);
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 700px 1fr);
+    padding-top: 250px;
+}
+
+.home .left-content {
+    margin-left: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+.home .left-content h1 {
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.home .left-content h2 {
+    margin-top: -10px;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.home .left-content hr {
+    width: 200px;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quote-body {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.quote-body .icon-quote {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.quote-body .icon-quote .icon {
+    margin-right: 5px;
+}
+
+.quote-body .icon-quote .author {
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 60px;
+}
+
+/* end home principale */
+
+/* start home contents images */
+
+.photos-container {
+    max-width: 100%;
+    padding: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 5px;
+}
+
+.gallery img {
+    border-radius: 15px;
+}
+
+.gallery_link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery_overly {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.gallery_link:hover .gallery_overly {
+    opacity: 1;
+}
+
+.gallery_overly span {
+    position: relative;
+    line-height: 3rem;
+}
+
+.gallery_overly span:before,
+.gallery_overly span:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: width .3s ease-out .2s;
+}
+
+.gallery_overly span:before {
+    top: 0;
+    left: 0;
+}
+
+.gallery_overly span:after {
+    bottom: 0;
+    right: 0;
+}
+
+.gallery_link:hover .gallery_overly span:before,
+.gallery_link:hover .gallery_overly span:after {
+    width: 100%;    
+}
+
+
+.gallery .gar1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.gallery .gar4 {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+}
+
+.gallery_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* end home contents images */
+
+/* start footer */
+
+footer {
+    background: #220A38;
+    padding: 60px 0px 60px 100px;
+}
+
+footer > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer  span {
+    font-size: 12px;
+    margin-top: 5px;
+    color: white;
+    text-transform:capitalize;
+
+}
+
+footer .footer-container img {
+    height: 30px;
+}
+
+footer h1 {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 30px;
+    color: #E95DBC;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+footer h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #E95DBC;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li:nth-child(even) {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #E95DBC;
+}
+
+footer .footer-social a {
+    margin-right: 40px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+
+/* end footer */
+
+/* start blogs */
+
+#container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 4vw;
+}
+
+#container .blogs {
+    width: 60%;
+}
+
+#container .cont {
+    width: 30%;
+    position: fixed;
+    left: 850px;
+    
+}
+
+#container .blogs img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#container .blogs .post {
+    padding: 30px;
+}
+
+#container .blogs .post h3 {
+    color: #220A38;
+    padding: 15px 0px 15px 0px;
+}
+
+#container .blogs .post h4 {
+    color: #691053;
+    padding: 15px 0px 15px 0px;
+}
+
+#container .blogs .post h1 {
+    color: #220A38;
+    padding: 15px 0px 10px 0px;
+    font-size: 30px;
+}
+
+#container .blogs .post p {
+    color: #474545;
+}
+
+#container .cont h2 {
+    padding-bottom: 7px;
+    color: #220A38;
+}
+
+#container .cont a {
+    text-decoration: none;
+    color: #474545;
+    font-size: 15px;
+    line-height: 45px;
+    transition: all .3s ease-in-out;
+}
+
+#container .cont a:hover {
+    color: rgb(224, 19, 146);
+}
+
+/* end blogs */
+
+/* start contact */
+
+
+.contact-banner {
+    background-image: linear-gradient(to right,rgb(218, 26, 224) 0%,rgb(47, 6, 114) 100%);
+    color: white;
+    padding: 40px;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 40px;
+  }
+  
+form p {
+    font-size: 20px;
+  }
+  
+.contact-description {
+    margin-bottom: 40px;
+  }
+  
+#contact-form input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 280px;
+    border: 1px solid #220A38;
+    font-size: 18px;
+    outline: none;
+    color: #333;
+  }
+  
+.form-control {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  
+#contact-form label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .hide {
+    opacity: 0;
+  }
+  
+  textarea {
+    width: 560px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    height: 200px;
+    font-size: 18px;
+  }
+  
+  button {
+    color: black;
+    padding: 20px;
+    border: 1px solid #220A38;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #220A38;
+  }
+  
+  button:hover {
+    background-image: linear-gradient(to right,rgb(45, 3, 112) 0%,rgb(70, 8, 95) 100%);
+    color: white;
+  }
+  
+  form {
+    padding: 40px;
+  }
+  
+form hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 1px;
+    border: none;
+    background-color: #220A38;
+  }
+/* end contact*/
